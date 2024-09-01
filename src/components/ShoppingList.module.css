@@ -1,0 +1,26 @@
+/* src/components/ShoppingList.module.css */
+
+.listItem {
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .listItem img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .listItem h3 {
+    margin-bottom: 10px;
+  }
+  
+  .listItem button {
+    align-self: flex-end;
+  }
+  

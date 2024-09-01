@@ -1,0 +1,16 @@
+/* src/pages/HomePage.module.css */
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .homePage h1 {
+    margin-bottom: 20px;
+  }
+  
+  .homePage .lists {
+    width: 100%;
+  }
+  

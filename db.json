@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": "018d",
+      "email": "chadndalamba@gmail.com",
+      "password": "Nda_28339290",
+      "name": "Chadrack",
+      "surname": "Ndalamba",
+      "cellNumber": "0781291867"
+    }
+  ],
+  "lists": [
+    {
+      "id": "5cd9",
+      "name": "Rice",
+      "quantity": "3",
+      "notes": "3 kg",
+      "category": "Starch",
+      "image": {},
+      "userId": "018d"
+    }
+  ]
+}
