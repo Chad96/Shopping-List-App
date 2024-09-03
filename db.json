@@ -7,15 +7,41 @@
       "name": "Chadrack",
       "surname": "Ndalamba",
       "cellNumber": "0781291867"
+    },
+    {
+      "id": "1489",
+      "email": "chadrackndalamba@gmail.com",
+      "password": "Nda_28339290",
+      "name": "Chadrack",
+      "surname": "Ndalamba",
+      "cellNumber": "0781291867"
     }
   ],
   "lists": [
     {
-      "id": "5cd9",
       "name": "Rice",
       "quantity": "3",
       "notes": "3 kg",
       "category": "Starch",
+      "image": {},
+      "userId": "018d",
+      "id": "5cd9"
+    },
+    {
+      "id": "2ce5",
+      "name": "Bread",
+      "quantity": "4",
+      "notes": "2x White Bread\n2x Brown Bread",
+      "category": "Bakery",
+      "image": {},
+      "userId": "018d"
+    },
+    {
+      "id": "8a51",
+      "name": "Apples",
+      "quantity": "4",
+      "notes": "1x Red Apples\n3x Green Apples",
+      "category": "Fruits",
       "image": {},
       "userId": "018d"
     }

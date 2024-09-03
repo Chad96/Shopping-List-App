@@ -29,11 +29,27 @@ const shoppingListSlice = createSlice({
     },
     addUser(state, action) {
       state.users.push(action.payload);
-    }
+    },
+    updateUser(state, action) {  // Reducer to update user in state
+      const index = state.users.findIndex(user => user.id === action.payload.id);
+      if (index !== -1) state.users[index] = action.payload;
+    },
+    deleteUser(state, action) {  // Reducer to delete user from state
+      state.users = state.users.filter(user => user.id !== action.payload);
+    },
   },
 });
 
-export const { setLists, addList, updateList, deleteList, setUsers, addUser } = shoppingListSlice.actions;
+export const {
+  setLists,
+  addList,
+  updateList,
+  deleteList,
+  setUsers,
+  addUser,
+  updateUser,  // Reducer
+  deleteUser,  // Reducer
+} = shoppingListSlice.actions;
 
 // Thunks for Shopping Lists
 export const fetchLists = () => async dispatch => {
@@ -65,6 +81,16 @@ export const fetchUsers = () => async dispatch => {
 export const createUser = (user) => async dispatch => {
   const response = await axios.post('http://localhost:5000/users', user);
   dispatch(addUser(response.data));
+};
+
+export const updateUserThunk = (user) => async dispatch => {  // Renamed thunk
+  const response = await axios.put(`http://localhost:5000/users/${user.id}`, user);
+  dispatch(updateUser(response.data));  // Dispatches the reducer
+};
+
+export const deleteUserThunk = (id) => async dispatch => {  // Renamed thunk
+  await axios.delete(`http://localhost:5000/users/${id}`);
+  dispatch(deleteUser(id));  // Dispatches the reducer
 };
 
 export default shoppingListSlice.reducer;
